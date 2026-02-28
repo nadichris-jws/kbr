@@ -114,8 +114,8 @@ th,td{
   position:fixed;
   top:0;
   left:0;
-  width:100%;
-  height:100%;
+  width:100vw;
+  height:100vh;
   display:none;
   justify-content:center;
   align-items:center;
@@ -126,8 +126,8 @@ th,td{
 /* BACKGROUND FULL IMAGE */
 .bg-full{
   position:absolute;
-  width:100%;
-  height:100%;
+  width:100vw;
+  height:100vh;
   object-fit:cover;
   top:0;
   left:0;
@@ -263,7 +263,7 @@ th,td{
 </div>
 
 <!-- AUDIO ADZAN -->
-<audio id="adzanAudio" src="Adhan.wav"></audio>
+<audio id="adzanAudio" src="beep.mp3"></audio>
 
 <!-- ================= OVERLAY ADZAN ================= -->
 <div id="adzanOverlay" class="overlay">
@@ -429,7 +429,7 @@ function updateCountdown(){
   const s = String(Math.floor((diff % 60000) / 1000)).padStart(2,"0");
 
   countdown.textContent =
-    `${next.n.toUpperCase()} : - ${h}: ${m}: ${s}`;
+    `${next.n.toUpperCase()} :  ${h}: ${m}: ${s}`;
 }
 
 /* update tiap detik */
@@ -523,7 +523,7 @@ function mulaiIqomah(){
       setTimeout(() => {
         iqomahOverlay.style.display = "none";
         sedangProses = false;
-      },3000);
+      },2000);
     }
 
     durasi--;
@@ -553,11 +553,11 @@ setInterval(() => {
       adzanAudio.currentTime = 0;
       adzanAudio.play();
 
-      /* 30 DETIK LALU MASUK IQOMAH */
+      /* 15 DETIK LALU MASUK IQOMAH */
       setTimeout(() => {
         adzanOverlay.style.display = "none";
         mulaiIqomah();
-      },30000);
+      },15000);
     }
 
   });
@@ -576,4 +576,5 @@ setInterval(() => {
 </body>
 
 </html>
+
 
