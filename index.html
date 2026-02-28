@@ -142,13 +142,6 @@ th,td{
   text-shadow:0 0 25px rgba(0,0,0,0.8);
   z-index:2;
 }
-
-/* RESPONSIVE TV BESAR */
-@media (min-width:1920px){
-  .countdown-text{
-    font-size:180px;
-  }
-}
 </style>
 
 <link rel="stylesheet" href="style.css">
@@ -263,7 +256,7 @@ th,td{
 </div>
 
 <!-- AUDIO ADZAN -->
-<audio id="adzanAudio" src="Adhan.wav"></audio>
+<audio id="adzanAudio" src="beep.mp3"></audio>
 
 <!-- ================= OVERLAY ADZAN ================= -->
 <div id="adzanOverlay" class="overlay">
@@ -553,11 +546,11 @@ setInterval(() => {
       adzanAudio.currentTime = 0;
       adzanAudio.play();
 
-      /* 30 DETIK LALU MASUK IQOMAH */
+      /* 15 DETIK LALU MASUK IQOMAH */
       setTimeout(() => {
         adzanOverlay.style.display = "none";
         mulaiIqomah();
-      },30000);
+      },15000);
     }
 
   });
@@ -576,4 +569,5 @@ setInterval(() => {
 </body>
 
 </html>
+
 
