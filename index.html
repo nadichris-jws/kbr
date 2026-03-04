@@ -138,7 +138,7 @@ th,td{
 				
   position:relative;			   							 		  				 
   text-align:center;
-  color:#00ffff;
+  color:black;
   z-index:2;
 }
 #iqomahCountdown{
@@ -308,7 +308,7 @@ th,td{
 <!-- ================= OVERLAY IQOMAH ================= -->
 <div id="iqomahOverlay" class="overlay">
   <img src="iqomah.jpg" class="bg-full">
-  <div id="iqomahCountdown" class="countdown-text">10:00</div>
+  <div id="iqomah-box" class="iqomahCountdown">10:00</div>
 <div class="iqomah-text">MENJELANG IQOMAH</div>
   </div>
 </div>
@@ -466,7 +466,7 @@ function updateCountdown(){
   const s = String(Math.floor((diff % 60000) / 1000)).padStart(2,"0");
 
   countdown.textContent =
-    `${next.n.toUpperCase()} : - ${h}: ${m}: ${s}`;
+    `${next.n.toUpperCase()} :  ${h}: ${m}: ${s}`;
 }
 
 /* update tiap detik */
