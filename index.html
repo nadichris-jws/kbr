@@ -151,8 +151,12 @@ th,td{
   font-size:50px;
   letter-spacing:10px;
 }
- 
-
+/* RESPONSIVE TV BESAR */
+  @media (min-width:1920px){
+  .countdown-text{
+    font-size:180px;
+  }
+}
 </style>
 
 <link rel="stylesheet" href="style.css">
@@ -297,14 +301,15 @@ th,td{
 
 <!-- ================= OVERLAY ADZAN ================= -->
 <div id="adzanOverlay" class="overlay">
-  <img src="adzan.jpg" class="bg-full">
+  <img src="adzan.jpg" alt="Adzan">
 </div>
 
 <!-- ================= OVERLAY IQOMAH ================= -->
 <div id="iqomahOverlay" class="overlay">
-  <img src="iqomah.jpg" class="bg-full">
-  <div id="iqomah-box" class="iqomahCountdown">10:00</div>
-<div class="iqomah-text">MENJELANG IQOMAH</div>
+  <img src="iqomah.jpg" alt="Iqomah">
+  <div class="iqomah-box">
+    <div id="iqomahCountdown">10:00</div>
+    <div class="iqomah-text">MENJELANG IQOMAH</div>
   </div>
 </div>
 
@@ -608,6 +613,12 @@ setInterval(() => {
 </body>
 
 </html>
+
+
+
+
+
+
 
 
 
